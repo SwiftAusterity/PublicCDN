@@ -42,7 +42,7 @@
     var currentName = jsonData[hostIndex].name;
     var flair = '<span style="font-size: x-large;">' + currentName + '</span>';
     if (jsonData[hostIndex].flair != '') {
-        flair = '<img src="' + data[hostIndex].flair + '" style="max-height: 50px; max-width: 150px" title = "' + currentName + '" />';
+        flair = '<img src="' + jsonData[hostIndex].flair + '" style="max-height: 50px; max-width: 150px" title = "' + currentName + '" />';
     }
 
     var prevIndex = hostIndex - 1;
@@ -53,7 +53,7 @@
     var prevLink = jsonData[prevIndex].web;
     var prevName = jsonData[prevIndex].name;
 
-    var nextIndex = nextIndex + 1;
+    var nextIndex = hostIndex + 1;
     if (hostIndex == maxHosts - 1) {
         nextIndex = 0;
     }
