@@ -9,19 +9,25 @@
         "name": "Under the Eclipse",
         "web": "http://netmud.swiftausterity.com/",
         "host": "netmud.swiftausterity.com",
-        "flair": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Sylvilagus_floridanus_14136.JPG"
+        "flair": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Sylvilagus_floridanus_14136.JPG",
+        "background":"navajowhite",
+        "foreground":"black"
       },
       {
         "name": "MidMud",
         "web": "http://midmud.com/",
         "host": "midmud.com",
-        "flair": "https://exventure.org/images/exventure.png"
+        "flair": "https://exventure.org/images/exventure.png",
+        "background":"navajowhite",
+        "foreground":"black"
       },
       {
         "name": "Gossip",
         "web": "http://gossip.haus/",
         "host": "gossip.haus",
-        "flair": ""
+        "flair": "",
+        "background":"navajowhite",
+        "foreground":"black"
       }
     ];
 
@@ -37,6 +43,17 @@
         }
 
         hostIndex += 1;
+    }
+
+    var backgroundColor = jsonData[hostIndex].background;
+    var color = jsonData[hostIndex].foreground;
+
+    if(backgroundColor == '') {
+        backgroundColor = 'navajowhite';
+    }
+
+    if(color == '') {
+        color = 'black';
     }
 
     var currentName = jsonData[hostIndex].name;
@@ -62,7 +79,7 @@
     var nextName = jsonData[nextIndex].name;
 
     var ringHtml =
-        '<div style="width: 250px; height: 100px; padding: 10px; border-radius: 15px; max-width: 250px; max-height: 100px; text-align: center; font-size: larger; background-color: navajowhite">' +
+        '<div style="width: 250px; height: 100px; padding: 10px; border-radius: 15px; max-width: 250px; max-height: 100px; text-align: center; font-size: larger; color: ' + color + ' background-color: ' + backgroundColor + '">' +
         '<div style="padding: 10px 0; max-height: 70px;">' +
         '<a href="' + prevLink + '"><span class="glyphicon glyphicon-chevron-left" style="float: left; padding-top: 15px;" title="' + prevName + '"></span></a>' +
         '<span id="thisRing">' +
