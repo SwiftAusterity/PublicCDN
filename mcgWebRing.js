@@ -1,10 +1,29 @@
-﻿(function () {
+(function () {
     if (document.getElementById('guildWebRing') === undefined) {
         return;
     }
 
-    var data = getJson();
-    var jsonData = JSON.parse(data);
+    var jsonData =     
+     [
+      {
+        "name": "Under the Eclipse",
+        "web": "http://netmud.swiftausterity.com/",
+        "host": "netmud.swiftausterity.com",
+        "flair": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Sylvilagus_floridanus_14136.JPG"
+      },
+      {
+        "name": "MidMud",
+        "web": "http://midmud.com/",
+        "host": "midmud.com",
+        "flair": "https://exventure.org/images/exventure.png"
+      },
+      {
+        "name": "Gossip",
+        "web": "http://gossip.haus/",
+        "host": "gossip.haus",
+        "flair": ""
+      }
+    ];
 
     var currentHost = window.location.host;
 
@@ -56,27 +75,3 @@
 
     document.getElementById('guildWebRing').innerHTML = ringHtml;
 })();
-
-function getJson {
-return 
-    "[
-      {
-        "name": "Under the Eclipse",
-        "web": "http://netmud.swiftausterity.com/",
-        "host": "netmud.swiftausterity.com",
-        "flair": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Sylvilagus_floridanus_14136.JPG"
-      },
-      {
-        "name": "MidMud",
-        "web": "http://midmud.com/",
-        "host": "midmud.com",
-        "flair": "https://exventure.org/images/exventure.png"
-      },
-      {
-        "name": "Gossip",
-        "web": "http://gossip.haus/",
-        "host": "gossip.haus",
-        "flair": ""
-      }
-    ]";
-}
