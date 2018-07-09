@@ -25,7 +25,7 @@
         "name": "Gossip",
         "web": "http://gossip.haus/",
         "host": "gossip.haus",
-        "flair": "",
+        "flair": "https://gossip.haus/images/gossip.png",
         "background":"navajowhite",
         "foreground":"black"
       }
