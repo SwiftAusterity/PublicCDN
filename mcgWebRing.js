@@ -79,7 +79,7 @@
     var nextName = jsonData[nextIndex].name;
 
     var ringHtml =
-        '<div style="width: 250px; height: 100px; padding: 10px; border-radius: 15px; max-width: 250px; max-height: 100px; text-align: center; font-size: larger; color: ' + color + ' background-color: ' + backgroundColor + '">' +
+        '<div style="width: 250px; height: 100px; padding: 10px; border-radius: 15px; max-width: 250px; max-height: 100px; text-align: center; font-size: larger; color: ' + color + '; background-color: ' + backgroundColor + ';">' +
         '<div style="padding: 10px 0; max-height: 70px;">' +
         '<a href="' + prevLink + '"><span class="glyphicon glyphicon-chevron-left" style="float: left; padding-top: 15px;" title="' + prevName + '"></span></a>' +
         '<span id="thisRing">' +
