@@ -15,7 +15,7 @@
       },
       {
         "name": "MidMud",
-        "web": "http://midmud.com/",
+        "web": "https://midmud.com/",
         "host": "midmud.com",
         "flair": "https://exventure.org/images/exventure.png",
         "background":"navajowhite",
